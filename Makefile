@@ -17,10 +17,10 @@ server-assets:
 		assets/server/...
 
 ngrokd:
-	go build server/daemon/ngrokd.go
+	go build -tags=release server/daemon/ngrokd.go
 
 ngrok:
-	go build
+	go build -tags=release
 
 all: ngrok ngrokd
 
